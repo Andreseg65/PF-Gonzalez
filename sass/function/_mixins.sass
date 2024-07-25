@@ -1,0 +1,26 @@
+@mixin flex-row-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin margin-padding($m, $p)
+    margin: $m
+    padding: $p
+    background: map-get($paletaColores, principal)
+
+@mixin respond-to($breakpoint)
+  @if $breakpoint == small
+    @media (max-width: $breakpoint-sm)
+      @content
+
+  @else if $breakpoint == medium
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md)
+      @content
+
+  @else if $breakpoint == large
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg)
+      @content
+
+  @else if $breakpoint == xlarge
+    @media (min-width: $breakpoint-lg)
+      @content
