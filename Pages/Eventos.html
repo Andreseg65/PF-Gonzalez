@@ -27,7 +27,7 @@
   <body>
     <!-- Header inicio -->
     <header class="head">
-      <nav class="navbar navbar-expand-lg bg-transparent fw-bold">
+      <nav class="navbar navbar-expand-lg bg-transparent">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -43,19 +43,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="../index.html">Inicio</a>
+                <a class="nav-link" href="../index.html">INICIO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="LaBanda.html">La Banda</a>
+                <a class="nav-link" href="LaBanda.html">LA BANDA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Escuchanos.html">Escuchanos</a>
+                <a class="nav-link" href="Escuchanos.html">ESCUCHANOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Eventos.html">Eventos</a>
+                <a class="nav-link" href="Eventos.html">EVENTOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Contactanos.html">Contactanos</a>
+                <a class="nav-link" href="Contactanos.html">CONTACTANOS</a>
               </li>
             </ul>
           </div>
@@ -238,18 +238,37 @@
     <!-- main final  -->
 
     <!-- footer inicio -->
-    <footer>
-      <form action="#" method="get">
+    <footer class="footer">
+      <form action="#" method="get" class="subscribe-form">
         <fieldset>
           <legend>
-            Suscribite a nuestro <strong>fanzine </strong
-            ><em>“Puedo Morir Hoy”</em>
+            Suscríbete a nuestro <strong>fanzine</strong>
+            <em>“Puedo Morir Hoy”</em>
           </legend>
           <label for="mail">Ingresa tu Email</label>
-          <input type="text" mail="mail" />
+          <input type="email" id="mail" name="mail" />
           <input type="submit" value="Enviar" />
         </fieldset>
-      </form>
+        <section class="info-contact">
+          <div class="address-link">
+            <h5>Información de Contacto</h5>
+            <div class="contact-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <a href="https://www.google.com/maps/search/?api=1&query=177+Huntington+Ave+Ste+1703" target="_blank">
+                Dirección: 177 Huntington Ave Ste 1703
+              </a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:migret.music@hotmail.com">migret.music@hotmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+16175550108">+1-617-555-0108</a>
+            </div>
+          </div>
+        </section>    
+      </form> 
       <p>Copyright © 2024 Migret Music. Todos los derechos reservados</p>
     </footer>
     <!-- footer fin    -->

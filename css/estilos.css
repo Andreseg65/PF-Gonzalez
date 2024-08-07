@@ -5,12 +5,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 * body {
-  background-color: #1b1b1b;
+  background-color: #242222;
   font-family: Arial, sans-serif;
   color: #faf8f8;
 }
 * body h1 {
-  color: #beb202;
+  color: #f0ea97;
 }
 
 .main_start {
@@ -19,25 +19,24 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  margin: 20px auto;
-  border: 15px solid rgb(245, 253, 206);
   background-image: url(../assets/images/Campo1.webp);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  width: 90%;
-  height: 700px;
+  object-position: top;
+  width: 100%;
+  height: 100vh;
   text-align: center;
-  color: #f1efef;
 }
 .main_start:hover {
-  color: #87c1e8;
+  color: #fdff97;
   background-color: rgba(143, 149, 143, 0.2549019608);
 }
 
 h1.distintivo {
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
-  color: #b2d7f0;
+  color: #feffca;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;
   text-align: center;
@@ -69,7 +68,11 @@ a.bandcamp {
   border-radius: 0.25rem;
   font-size: 1.5rem;
   color: #faf8f8;
-  background-color: rgba(80, 47, 47, 0.8);
+  border: 1px solid rgb(245, 253, 206);
+}
+a.bandcamp:hover {
+  color: #fdff97;
+  background-color: rgba(143, 149, 143, 0.2549019608);
 }
 @media (max-width: 576px) {
   a.bandcamp {
@@ -89,8 +92,8 @@ a.bandcamp {
     padding: 0.5rem 1rem;
   }
   a.bandcamp:hover {
-    color: #87c1e8;
-    background-color: rgba(51, 146, 11, 0.6);
+    color: #fdff97;
+    background-color: rgba(20, 20, 20, 0.6);
   }
 }
 
@@ -170,15 +173,26 @@ a.bandcamp {
   margin: 10px;
 }
 .main_listend .spotify .bandcamp {
-  text-align: center;
   display: flex;
+  text-align: center;
 }
 
+.celebration .info {
+  text-align: start;
+}
+.celebration .info p {
+  text-align: start;
+}
+.celebration .info p a {
+  text-decoration: none;
+  color: inherit;
+}
 .celebration .container .row .col-md-6 .bandcamp {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 46%;
   height: 0;
   overflow: hidden;
+  height: 100%;
 }
 .celebration .container .row .col-md-6 .responsive-iframe {
   position: absolute;
@@ -186,6 +200,21 @@ a.bandcamp {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 46.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 .main_events {
@@ -301,11 +330,23 @@ body .row p {
 }
 
 .head {
-  background-image: linear-gradient(#04a704, rgba(180, 245, 174, 0.56));
+  background-image: linear-gradient(#000000, rgb(75, 75, 75));
   padding: 15px 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.head .navbar .nav-link {
+  color: white;
+}
+.head .navbar .nav-link:hover {
+  color: gray;
+}
+.head .navbar .navbar-toggler {
+  border-color: rgb(250, 247, 247);
+}
+.head .navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 .head .redes {
   display: flex;
@@ -325,7 +366,7 @@ body .row p {
 }
 .head .redes a i {
   font-size: 25px;
-  color: #222;
+  color: #eeebeb;
 }
 @media (max-width: 360px) {
   .head .redes a i {
@@ -333,42 +374,101 @@ body .row p {
   }
 }
 
-footer {
+.footer {
+  background-image: linear-gradient(rgb(75, 75, 75), #000000);
+  color: #fff;
   padding: 10px;
-  background-image: linear-gradient(rgba(180, 245, 174, 0.56), #04a704);
+  justify-content: space-around;
 }
-footer form {
-  margin-bottom: 10px;
-}
-footer form fieldset {
-  border: 5px solid #beefa9;
-  padding: 15px;
-  max-width: 100%;
-  text-align: center;
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
+  text-align: center;
 }
-footer form fieldset label {
+.subscribe-form fieldset {
+  flex: 1;
+  margin-left: 20px;
+  min-width: 500px;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+.subscribe-form fieldset legend {
+  font-size: 1rem;
+}
+.subscribe-form fieldset legend label {
   display: block;
   margin-bottom: 3px;
 }
-footer form fieldset input[type=text] {
-  width: 50%;
+.subscribe-form fieldset input[type=text] {
+  width: 100%;
   padding: 5px;
   box-sizing: border-box;
 }
-footer form fieldset input[type=submit] {
-  margin-top: 5px;
-  padding: 6px 15px;
+.subscribe-form fieldset input[type=submit] {
+  padding: 2px 10px;
   transition: 500ms;
 }
-footer form fieldset input[type=submit]:active {
-  background: #1be214;
+.subscribe-form fieldset input[type=submit]:active {
   transform: scale(0.8);
 }
-footer p {
-  text-align: center;
+.subscribe-form .info-contact {
+  flex: 1;
+  min-width: 300px;
+  align-items: center;
+  margin: 0px 0;
+  padding: 0px;
+  width: 100%;
+}
+.subscribe-form .info-contact .address-link {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-form .info-contact .address-link h5 {
+  margin-bottom: 0px;
+}
+.subscribe-form .info-contact .address-link h5 .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.subscribe-form .info-contact .address-link h5 .contact-item i {
+  margin-right: 10px;
+  font-size: 24px;
+  width: 500px;
+}
+.subscribe-form .info-contact .address-link a {
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+.subscribe-form .info-contact .address-link a:hover {
+  text-decoration: underline;
 }
 
+p {
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .subscribe-form {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .subscribe-form fieldset, .subscribe-form .info-contact {
+    margin-right: 0;
+    margin-bottom: 10px;
+    min-width: auto;
+    font-size: 0.75rem;
+  }
+  .subscribe-form fieldset legend, .subscribe-form .info-contact legend {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 1000px) {
   .contenedor-superior {
     flex-direction: column;
