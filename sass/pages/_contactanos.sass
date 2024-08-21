@@ -1,54 +1,48 @@
-body
-  height: 100%
-  margin: 0
-  box-sizing: border-box
+// Estilos para el main
+main
+  .contact-section
+    padding: 1rem
+    color: white
+    margin: 0 auto
+    .info_contact img
+      border-radius: $border-radius
+      box-shadow: 0 8px 8px $shadow-color
+      text-align: center
+      display: block
+      margin: 0 auto
 
-  .main_contact
-    display: flex
-    flex-direction: column
-    margin: auto
-    min-height: 100vh
-    max-width: 1200px
-    box-sizing: border-box
-    
-  .row
-    flex-grow: 1
-    h1
-      padding: 10px
-      margin-top: 40px
-    img.img-fluid
-      background-size: cover
-      background-repeat: no-repeat
-      width: 500px
-      height: auto
+    h4
+      text-align: center
 
-    .form-group
-      gap: 50px
-      display: grid
-      grid-template-columns: 1fr 1fr
-
-    .info_contact div
-      margin-top: 30px
-      gap: 20px
-      display: flex
-      align-items: center
-      a
-        text-decoration: none
-        color: inherit
-        &:hover
-          color: #007bff
-          text-decoration: underline
+    // Estilo para el formulario
     form
-      .col-md-6, .col-12, .col-md-4, .col-md-2
-        margin-bottom: 10px
-      label
-        display: block
-        margin-bottom: 5px
-      input, select
-        width: 100%
-        padding: 8px
-        box-sizing: border-box
-    h2
-      margin-top: 30px
-    p
-      margin: 5px 0px
+      // background-color: $background-color
+      padding: 1.5rem
+      border-radius: $border-radius
+      box-shadow: 0 4px 8px $shadow-color
+      color: #f0f0f0
+      align-content: center
+
+      .form-label
+        font-weight: bold
+        color: #eef0ec
+
+      .form-control, .form-select
+        border-radius: $border-radius
+        border: 1px solid $primary-color
+
+      button
+        background-color: $secondary-color-bottom
+        border: none
+        color: white
+        font-weight: bold
+        border-radius: $border-radius
+        padding: 0.5rem
+        transition: background-color 0.3s ease
+        &:hover
+          background-color: darken($secondary-color-bottom, 10%)
+
+    // Estilo para la imagen
+    .info_contact img
+      border-radius: $border-radius
+      box-shadow: 0 4px 8px $shadow-color

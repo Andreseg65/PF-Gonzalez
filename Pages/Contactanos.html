@@ -93,13 +93,17 @@
     <!-- header fin -->
 
     <!-- comienzo del main -->
-    <main class="main_contact container-fluid">
-      <div class="row">
-        <section class="col-md-6">
-          <h1 class="fw-bolder">+Contactanos</h1>
-          <form class="row g-3">
-            <h4>Envíanos un mensaje y te responderemos en 24 horas</h4>
-            <div class="col-md-6">
+    <h1 class="fw-bolder">+Contáctanos</h1>
+    <main class="container my-5">
+      <div class="row justify-content-center">
+        <section class="col-12 col-md-8 contact-section">
+          <section class="info_contact">
+            <img src="../assets/images/Combi.webp" class="img-fluid" alt="Dibujo de una miniband"
+            />
+          </section>
+          <form>
+            <h4 class="mb-4">Envíanos un mensaje y te responderemos en 24 horas</h4>
+            <div class="mb-3">
               <label for="inputEmail4" class="form-label">Email</label>
               <input
                 type="email"
@@ -108,7 +112,7 @@
                 placeholder="abced65@hotmail.com"
               />
             </div>
-            <div class="col-md-6">
+            <div class="mb-3">
               <label for="inputAddress" class="form-label">Dirección</label>
               <input
                 type="text"
@@ -117,7 +121,7 @@
                 placeholder="Calle, número"
               />
             </div>
-            <div class="col-md-6">
+            <div class="mb-3">
               <label for="inputAddress2" class="form-label">Dirección2</label>
               <input
                 type="text"
@@ -126,11 +130,13 @@
                 placeholder="Dpto, piso, entre calles"
               />
             </div>
-            <div class="col-md-6">
+            <div class="mb-3">
               <label for="inputCity" class="form-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCity" />
+              <input type="text" class="form-control" id="inputCity" 
+              placeholder="Ciudad"
+              />
             </div>
-            <div class="col-md-9">
+            <div class="mb-3">
               <label for="inputState" class="form-label">Provincia</label>
               <select id="inputState" class="form-select">
                 <option selected>Elige...</option>
@@ -161,27 +167,24 @@
                 <option>Tucumán</option>
               </select>
             </div>
-            <div class="col-md-3">
+            <div class="mb-3">
               <label for="inputZip" class="form-label">C.P.</label>
-              <input type="text" class="form-control" id="inputZip" />
+              <input type="text" class="form-control" id="inputZip" 
+              placeholder="Código Postal"
+              />
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn-primary">Enviar</button>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+              placeholder="Escribinos tu mensaje"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn">Enviar</button>
             </div>
           </form>
         </section>
-        <section
-          class="info_contact col-md-6 d-flex flex-column justify-content-center"
-        >
-          <img
-            src="../assets/images/Combi.webp"
-            class="img-fluid"
-            alt="Dibujo de una miniband"
-          />
-        </section>
       </div>
-    </main>
-    <!-- main final  -->
+    </main>        
 
     <!-- footer inicio -->
     <footer class="footer">

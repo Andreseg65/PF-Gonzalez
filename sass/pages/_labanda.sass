@@ -1,55 +1,52 @@
-.main_band
-  padding: 20px
-  margin: 20px
-  h1
-    margin: 10px
-    padding: 10px
-    
-.grid-container
-  justify-items: center
-  align-items: center
-  gap: 10px
+.main__band, .historia
+  width: 100%
+  margin: 0 auto
+  padding: $padding
+  box-sizing: border-box
 
-  .div_histori
-    padding: 10px
-    h2
-      margin-top: 40px
-      text-align: center
-    img
+.img__histori
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  object-position: top
+  width: 100%
+  height: auto
+  display: block
+  margin: 0 auto
+
+.franytiti
+  display: flex
+  gap: 30px
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 0 auto
+  padding: $padding
+  // max-width: $max-width
+  box-sizing: border-box
+  .card
+    flex: 1 1 $flex-basis-desktop
+    margin-bottom: 10px
+    box-sizing: border-box  
+    &__img
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      object-position: top
+      // justify-content: center
       width: 100%
-      margin: 0px auto
+      height: auto
       display: block
-      border: 10px solid $bg-color
-      transition: transform $transition-duration
-      &:hover
-        transform: scale(0.9)
 
-  .franytiti
-    display: flex
-    justify-content: center
-    gap: 20px
-    .grid-fran, .grid-betsy
-      margin-bottom: $margin-bottom
-      h3
-        margin-bottom: $h3-margin-bottom
+.galeria
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
-  img.image-resize
-    object-position: top
-    max-width: 100%
-    height: auto
-    max-height: $max-img-height
-    padding: 10px
-    margin: 40px 0px 0px 0px
-    object-fit: cover
-    border: 7px solid $bg-color
-    transition: transform $transition-duration
-    &:hover
-      transform: scale(0.9)
-    h2
-      margin-top: $h2-margin-top
-      margin-bottom: $h2-margin-bottom
-      font-size: $h2-font-size
-    p
-      font-size: $p-font-size
-      line-height: $p-line-height
-      margin-bottom: $p-margin-bottom
+.galeriai
+  flex: 1 1 35%
+  margin: 10px
+
+.img__galeria
+  width: 100%
+  height: auto
+  object-fit: cover  
